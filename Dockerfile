@@ -1,0 +1,11 @@
+FROM clojure:lein-2.9.3
+
+ENV LANG C.UTF-8
+
+ENV APP_HOME /duct-todo
+
+RUN mkdir $APP_HOME
+
+WORKDIR $APP_HOME
+
+ADD . $APP_HOME
