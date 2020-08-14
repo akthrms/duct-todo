@@ -5,28 +5,19 @@
   ; routing
   :duct.router/ataraxy
   {:routes
-   {[:get "/"]    [:todo.handler/index]
-    ["/articles"] {[:get]                                   [:todo.handler.articles/index]
-                   [:post {{:keys [content]} :body-params}] [:todo.handler.articles/create content]}}}
+   {["/articles"] {[:get]  [:duct-todo.handler.articles/index]
+                   [:post] [:duct-todo.handler.articles/create]}}}
 
   ; handler
-  [:duct.handler.static/ok :todo.handler/index]
-  {:body {:article "/articles"}}
+  :duct-todo.handler.articles/index
+  {:db #ig/ref :duct.database/sql}
 
-  [:duct.handler.sql/query :todo.handler.articles/index]
-  {:sql ["SELECT * FROM articles"]}
+  :duct-todo.handler.articles/create
+  {:db #ig/ref :duct.database/sql}
 
-  [:duct.handler.sql/insert :todo.handler.articles/create]
-  {:request {[_ content] :ataraxy/result}
-   :sql     ["INSERT INTO articles (content) VALUES (?)" content]}
-
-  ; migration
-  :duct.migrator/ragtime
-  {:migrations [#ig/ref :todo.migration/create-articles]}
-
-  [:duct.migrator.ragtime/sql :todo.migration/create-articles]
-  {:up   ["CREATE TABLE articles (id serial NOT NULL PRIMARY KEY, content text NOT NULL)"]
-   :down ["DROP TABLE articles"]}}
+  ; database
+  :duct.database.sql/hikaricp
+  {}}
 
  :duct.profile/dev
  #duct/include "dev"
@@ -41,7 +32,4 @@
  {}
 
  :duct.module.web/api
- {}
-
- :duct.module/sql
  {}}

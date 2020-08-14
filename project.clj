@@ -4,12 +4,13 @@
   :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [duct/core "0.7.0"]
+                 [duct/database.sql.hikaricp "0.4.0"]
                  [duct/handler.sql "0.4.0"]
                  [duct/module.ataraxy "0.3.0"]
                  [duct/module.logging "0.4.0"]
-                 [duct/module.sql "0.5.0"]
                  [duct/module.web "0.7.0"]
-                 [org.postgresql/postgresql "42.2.5"]]
+                 [org.postgresql/postgresql "42.2.5"]
+                 [ragtime "0.8.0"]]
   :plugins [[duct/lein-duct "0.12.1"]]
   :main ^:skip-aot duct-todo.main
   :resource-paths ["resources" "target/resources"]
@@ -26,4 +27,6 @@
                             :resource-paths ["dev/resources"]
                             :dependencies   [[integrant/repl "0.3.1"]
                                              [eftest "0.5.7"]
-                                             [kerodon "0.9.0"]]}})
+                                             [kerodon "0.9.0"]]}}
+  :aliases {"migrate"  ["run" "-m" "user/migrate"]
+            "rollback" ["run" "-m" "user/rollback"]})
