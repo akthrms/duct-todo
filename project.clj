@@ -27,6 +27,7 @@
                             :resource-paths ["dev/resources"]
                             :dependencies   [[integrant/repl "0.3.1"]
                                              [eftest "0.5.7"]
-                                             [kerodon "0.9.0"]]}}
+                                             [kerodon "0.9.0"]
+                                             [com.gearswithingears/shrubbery "0.4.1"]]}}
   :aliases {"migrate"  ["run" "-m" "user/migrate"]
             "rollback" ["run" "-m" "user/rollback"]})

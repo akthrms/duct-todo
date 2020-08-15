@@ -29,6 +29,7 @@
     <orderEntry type="library" name="Leiningen: com.fasterxml.jackson.dataformat/jackson-dataformat-cbor:2.9.0" level="project" />
     <orderEntry type="library" name="Leiningen: com.fasterxml.jackson.dataformat/jackson-dataformat-smile:2.9.0" level="project" />
     <orderEntry type="library" name="Leiningen: com.fasterxml.jackson.datatype/jackson-datatype-jsr310:2.9.7" level="project" />
+    <orderEntry type="library" name="Leiningen: com.gearswithingears/shrubbery:0.4.1" level="project" />
     <orderEntry type="library" name="Leiningen: com.googlecode.json-simple/json-simple:1.1.1" level="project" />
     <orderEntry type="library" name="Leiningen: com.taoensso/encore:2.91.0" level="project" />
     <orderEntry type="library" name="Leiningen: com.taoensso/timbre:4.10.0" level="project" />
