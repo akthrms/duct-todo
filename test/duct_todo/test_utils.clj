@@ -10,9 +10,7 @@
   (sql/->Boundary db-spec))
 
 (defn drop-all-tables []
-  (let [table-names (map :relname (jdbc/query db-spec ["SELECT relname
-                                                        FROM pg_stat_user_tables
-                                                        WHERE relname <> 'ragtime_migrations'"]))]
+  (let [table-names (map :relname (jdbc/query db-spec ["SELECT relname FROM pg_stat_user_tables WHERE relname <> 'ragtime_migrations'"]))]
     (doseq [t table-names]
       (jdbc/delete! db-spec t []))))
 
