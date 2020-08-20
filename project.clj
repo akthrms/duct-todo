@@ -3,9 +3,11 @@
   :url "http://example.com/FIXME"
   :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.10.0"]
+                 [buddy/buddy-hashers "1.4.0"]
                  [duct/core "0.7.0"]
                  [duct/database.sql.hikaricp "0.4.0"]
                  [duct/handler.sql "0.4.0"]
+                 [duct/middleware.buddy "0.1.0"]
                  [duct/module.ataraxy "0.3.0"]
                  [duct/module.logging "0.4.0"]
                  [duct/module.web "0.7.0"]

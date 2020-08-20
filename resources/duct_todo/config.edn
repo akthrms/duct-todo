@@ -6,7 +6,11 @@
   :duct.router/ataraxy
   {:routes
    {["/articles"] {[:get]  [:duct-todo.handler.articles/index]
-                   [:post] [:duct-todo.handler.articles/create]}}}
+                   [:post] ^:jws-auth [:duct-todo.handler.articles/create]}
+    ["/users"]    {[:post]           [:duct-todo.handler.users/create]
+                   [:post "/signin"] [:duct-todo.handler.users/signin]}}
+   :middleware
+   {:jws-auth #ig/ref :duct.middleware.buddy/authentication}}
 
   ; handler
   :duct-todo.handler.articles/index
@@ -14,6 +18,18 @@
 
   :duct-todo.handler.articles/create
   {:db #ig/ref :duct.database/sql}
+
+  :duct-todo.handler.users/create
+  {:db #ig/ref :duct.database/sql}
+
+  :duct-todo.handler.users/signin
+  {:db         #ig/ref :duct.database/sql
+   :jwt-secret #duct/env "JWT_SECRET"}
+
+  ; buddy
+  :duct.middleware.buddy/authentication
+  {:backend :jws
+   :secret  #duct/env "JWT_SECRET"}
 
   ; database
   :duct.database.sql/hikaricp
