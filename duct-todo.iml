@@ -16,14 +16,16 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Leiningen: ataraxy:0.4.2" level="project" />
+    <orderEntry type="library" name="Leiningen: buddy/buddy-auth:2.1.0" level="project" />
     <orderEntry type="library" name="Leiningen: buddy/buddy-core:1.6.0" level="project" />
     <orderEntry type="library" name="Leiningen: buddy/buddy-hashers:1.4.0" level="project" />
+    <orderEntry type="library" name="Leiningen: buddy/buddy-sign:2.2.0" level="project" />
     <orderEntry type="library" name="Leiningen: cheshire:5.8.1" level="project" />
     <orderEntry type="library" name="Leiningen: clj-stacktrace:0.2.8" level="project" />
     <orderEntry type="library" name="Leiningen: clj-time:0.14.3" level="project" />
     <orderEntry type="library" name="Leiningen: clojure-complete:0.2.5" level="project" />
     <orderEntry type="library" name="Leiningen: clojurewerkz/scrypt:1.2.0" level="project" />
-    <orderEntry type="library" name="Leiningen: clout:2.2.1" level="project" />
+    <orderEntry type="library" name="Leiningen: clout:2.1.2" level="project" />
     <orderEntry type="library" name="Leiningen: com.cognitect/transit-clj:0.8.313" level="project" />
     <orderEntry type="library" name="Leiningen: com.cognitect/transit-java:0.8.337" level="project" />
     <orderEntry type="library" name="Leiningen: com.fasterxml.jackson.core/jackson-annotations:2.9.0" level="project" />
@@ -51,6 +53,7 @@
     <orderEntry type="library" name="Leiningen: duct/handler.sql:0.4.0" level="project" />
     <orderEntry type="library" name="Leiningen: duct/logger.timbre:0.4.1" level="project" />
     <orderEntry type="library" name="Leiningen: duct/logger:0.3.0" level="project" />
+    <orderEntry type="library" name="Leiningen: duct/middleware.buddy:0.1.0" level="project" />
     <orderEntry type="library" name="Leiningen: duct/module.ataraxy:0.3.0" level="project" />
     <orderEntry type="library" name="Leiningen: duct/module.logging:0.4.0" level="project" />
     <orderEntry type="library" name="Leiningen: duct/module.web:0.7.0" level="project" />
@@ -58,9 +61,10 @@
     <orderEntry type="library" name="Leiningen: eftest:0.5.7" level="project" />
     <orderEntry type="library" name="Leiningen: enlive:1.1.6" level="project" />
     <orderEntry type="library" name="Leiningen: fipp:0.6.14" level="project" />
+    <orderEntry type="library" name="Leiningen: funcool/cuerdas:2.0.3" level="project" />
     <orderEntry type="library" name="Leiningen: hiccup:1.0.5" level="project" />
     <orderEntry type="library" name="Leiningen: hikari-cp:2.6.0" level="project" />
-    <orderEntry type="library" name="Leiningen: instaparse:1.4.8" level="project" />
+    <orderEntry type="library" name="Leiningen: instaparse:1.4.0" level="project" />
     <orderEntry type="library" name="Leiningen: integrant/repl:0.3.1" level="project" />
     <orderEntry type="library" name="Leiningen: integrant:0.7.0" level="project" />
     <orderEntry type="library" name="Leiningen: io.aviso/pretty:0.1.34" level="project" />
